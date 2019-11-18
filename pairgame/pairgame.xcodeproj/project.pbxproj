@@ -20,6 +20,7 @@
 		1D36A896235240DE001E2F5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D36A894235240DE001E2F5C /* LaunchScreen.storyboard */; };
 		1D6356DF2382527100398921 /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6356DE2382527100398921 /* FloatingTextField.swift */; };
 		1D7478F22352548900B46C7A /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7478F12352548900B46C7A /* GameCell.swift */; };
+		1D9AEF5823825801005770D8 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9AEF5723825801005770D8 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		1D36A897235240DE001E2F5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D6356DE2382527100398921 /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		1D7478F12352548900B46C7A /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		1D9AEF5723825801005770D8 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				1D276C7123524338001AC336 /* SplashVC.swift */,
 				1D276C732352444D001AC336 /* DescriptionVC.swift */,
 				1D276C75235249FE001AC336 /* GameVC.swift */,
+				1D9AEF5723825801005770D8 /* LoginVC.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D9AEF5823825801005770D8 /* LoginVC.swift in Sources */,
 				1D36A88B235240DC001E2F5C /* ViewController.swift in Sources */,
 				1D276C742352444D001AC336 /* DescriptionVC.swift in Sources */,
 				1D7478F22352548900B46C7A /* GameCell.swift in Sources */,
