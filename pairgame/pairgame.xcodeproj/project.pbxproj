@@ -18,6 +18,7 @@
 		1D36A891235240DC001E2F5C /* pairgame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D36A88F235240DC001E2F5C /* pairgame.xcdatamodeld */; };
 		1D36A893235240DE001E2F5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D36A892235240DE001E2F5C /* Assets.xcassets */; };
 		1D36A896235240DE001E2F5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D36A894235240DE001E2F5C /* LaunchScreen.storyboard */; };
+		1D6356DF2382527100398921 /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6356DE2382527100398921 /* FloatingTextField.swift */; };
 		1D7478F22352548900B46C7A /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7478F12352548900B46C7A /* GameCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		1D36A892235240DE001E2F5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D36A895235240DE001E2F5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D36A897235240DE001E2F5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D6356DE2382527100398921 /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		1D7478F12352548900B46C7A /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 		1D36A885235240DC001E2F5C /* pairgame */ = {
 			isa = PBXGroup;
 			children = (
+				1D6356E02382527800398921 /* uiview */,
 				1D276C7B23524F89001AC336 /* cells */,
 				1D276C702352430D001AC336 /* controller */,
 				1D36A886235240DC001E2F5C /* AppDelegate.swift */,
@@ -99,6 +102,14 @@
 				1D36A88F235240DC001E2F5C /* pairgame.xcdatamodeld */,
 			);
 			path = pairgame;
+			sourceTree = "<group>";
+		};
+		1D6356E02382527800398921 /* uiview */ = {
+			isa = PBXGroup;
+			children = (
+				1D6356DE2382527100398921 /* FloatingTextField.swift */,
+			);
+			path = uiview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 				1D36A88B235240DC001E2F5C /* ViewController.swift in Sources */,
 				1D276C742352444D001AC336 /* DescriptionVC.swift in Sources */,
 				1D7478F22352548900B46C7A /* GameCell.swift in Sources */,
+				1D6356DF2382527100398921 /* FloatingTextField.swift in Sources */,
 				1D276C7823524CF5001AC336 /* LevelCell.swift in Sources */,
 				1D276C7223524338001AC336 /* SplashVC.swift in Sources */,
 				1D36A887235240DC001E2F5C /* AppDelegate.swift in Sources */,
