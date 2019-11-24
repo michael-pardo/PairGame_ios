@@ -21,6 +21,17 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        let imageSize = UIScreen.main.bounds.width/3 - 3
+        //  let height3 = UIScreen.main.bounds.height/3 - 3
+        let height3 = UIScreen.main.bounds.height/3 - 3
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 1, bottom: 5, right: 1)
+        layout.itemSize = CGSize(width: imageSize, height: height3)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 5
+        layout.headerReferenceSize = CGSize(width: 1, height: 1)
+        collectionView.collectionViewLayout = layout
+        
         
           
 
@@ -59,9 +70,12 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         
     }
     
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
+    
+    
     
     
     override func viewDidAppear(_ animated: Bool) {

@@ -114,7 +114,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="176" height="217"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lol" translatesAutoresizingMaskIntoConstraints="NO" id="lcH-yz-niH">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover_image" translatesAutoresizingMaskIntoConstraints="NO" id="lcH-yz-niH">
                                                             <rect key="frame" x="5" y="5" width="166" height="207"/>
                                                         </imageView>
                                                     </subviews>
@@ -254,7 +254,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="lol" width="179" height="245"/>
+        <image name="cover_image" width="280" height="259"/>
         <namedColor name="background">
             <color red="0.019607843137254902" green="0.066666666666666666" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

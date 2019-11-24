@@ -17,7 +17,7 @@ class GameCell: UICollectionViewCell {
 //        let image  = UIImage(named: "otro")
         if isOpen {
             isOpen = false
-            let image = UIImage(named: "lol")
+            let image = UIImage(named: "cover_image")
             card.image = image
             UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
         }else{
