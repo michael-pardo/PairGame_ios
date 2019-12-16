@@ -1,16 +1,15 @@
 //
-//  LoginVC.swift
+//  RegisterVC.swift
 //  pairgame
 //
-//  Created by Michael Pardo  on 17/11/19.
+//  Created by Michael Pardo  on 16/12/19.
 //  Copyright © 2019 Michael Pardo . All rights reserved.
 //
 
 import UIKit
 
-class LoginVC: UIViewController {
+class RegisterVC: UIViewController {
 
-    @IBOutlet weak var registerTxt: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 

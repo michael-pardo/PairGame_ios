@@ -27,4 +27,7 @@ class LevelCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func selectLevel(_ sender: UIButton) {
+        
+    }
 }
