@@ -10,10 +10,15 @@ import UIKit
 
 class LevelCell: UITableViewCell {
 
-    @IBOutlet weak var txtLevel: UILabel!
+    @IBOutlet weak var btnLevel: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        btnLevel.backgroundColor = .clear
+        btnLevel.layer.cornerRadius = 5
+        btnLevel.layer.borderWidth = 1
+        btnLevel.layer.borderColor = UIColor.white.cgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
