@@ -235,16 +235,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zU7-fd-YXR">
                                 <rect key="frame" x="0.0" y="206.33333333333337" width="375" height="243.66666666666663"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email:" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvg-wM-lEj">
-                                        <rect key="frame" x="37.666666666666657" y="57.666666666666657" width="300" height="31"/>
-                                        <color key="backgroundColor" name="invisible"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvg-wM-lEj" customClass="FloatingTextField" customModule="PairGame" customModuleProvider="target">
+                                        <rect key="frame" x="37.666666666666657" y="55.999999999999972" width="300" height="34"/>
                                         <color key="textColor" name="text_color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jEi-AI-scp">
-                                        <rect key="frame" x="37.666666666666657" y="130.66666666666666" width="300" height="31"/>
-                                        <color key="backgroundColor" name="invisible"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jEi-AI-scp" customClass="FloatingTextField" customModule="PairGame" customModuleProvider="target">
+                                        <rect key="frame" x="37.666666666666657" y="129.33333333333334" width="300" height="34"/>
                                         <color key="textColor" name="text_color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -254,11 +252,9 @@
                                     <constraint firstItem="pvg-wM-lEj" firstAttribute="width" secondItem="zU7-fd-YXR" secondAttribute="width" multiplier="0.8" id="5Qn-vu-OMO"/>
                                     <constraint firstItem="pvg-wM-lEj" firstAttribute="centerY" secondItem="zU7-fd-YXR" secondAttribute="centerY" multiplier="0.6" id="AGL-Tb-PdP"/>
                                     <constraint firstItem="jEi-AI-scp" firstAttribute="centerX" secondItem="zU7-fd-YXR" secondAttribute="centerX" id="JIY-UG-84M"/>
-                                    <constraint firstItem="pvg-wM-lEj" firstAttribute="height" secondItem="zU7-fd-YXR" secondAttribute="height" multiplier="0.126551" id="Mp8-5x-8ix"/>
                                     <constraint firstItem="jEi-AI-scp" firstAttribute="centerY" secondItem="zU7-fd-YXR" secondAttribute="centerY" multiplier="1.2" id="QkR-Yk-Pg1"/>
                                     <constraint firstItem="pvg-wM-lEj" firstAttribute="centerX" secondItem="zU7-fd-YXR" secondAttribute="centerX" id="VJx-wu-CTO"/>
                                     <constraint firstItem="jEi-AI-scp" firstAttribute="width" secondItem="zU7-fd-YXR" secondAttribute="width" multiplier="0.8" id="hgo-wA-xBA"/>
-                                    <constraint firstItem="jEi-AI-scp" firstAttribute="height" secondItem="zU7-fd-YXR" secondAttribute="height" multiplier="0.126551" id="tfW-vP-8tt"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgf-6s-SdI">

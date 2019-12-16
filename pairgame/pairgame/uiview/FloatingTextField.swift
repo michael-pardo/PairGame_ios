@@ -114,7 +114,7 @@ final class FloatingTextField: UITextField {
         border.isUserInteractionEnabled = false
         addSubview(border)
 
-        label.textColor = .gray
+        label.textColor = .white
         label.font = font
         label.text = placeholder
         label.isUserInteractionEnabled = false

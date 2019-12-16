@@ -22,6 +22,7 @@
 		1D7478F22352548900B46C7A /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7478F12352548900B46C7A /* GameCell.swift */; };
 		1D80FDA323A82EF8008488FB /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80FDA223A82EF8008488FB /* RegisterVC.swift */; };
 		1D9AEF5823825801005770D8 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9AEF5723825801005770D8 /* LoginVC.swift */; };
+		37581BC47F6FB9E79E13AD05 /* Pods_pairgame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7780661E35EAA7531BC43F /* Pods_pairgame.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,9 @@
 		1D7478F12352548900B46C7A /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		1D80FDA223A82EF8008488FB /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		1D9AEF5723825801005770D8 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		2E7780661E35EAA7531BC43F /* Pods_pairgame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pairgame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9681A7F00C5BA9768EE1EBD8 /* Pods-pairgame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pairgame.debug.xcconfig"; path = "Target Support Files/Pods-pairgame/Pods-pairgame.debug.xcconfig"; sourceTree = "<group>"; };
+		A6D0B0DD095AD7E8A18EB8E2 /* Pods-pairgame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pairgame.release.xcconfig"; path = "Target Support Files/Pods-pairgame/Pods-pairgame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37581BC47F6FB9E79E13AD05 /* Pods_pairgame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +87,8 @@
 			children = (
 				1D36A885235240DC001E2F5C /* pairgame */,
 				1D36A884235240DC001E2F5C /* Products */,
+				F9840F2C2B569CA563BD2014 /* Pods */,
+				CC70D54623B02AD478AE2AD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +125,23 @@
 			path = uiview;
 			sourceTree = "<group>";
 		};
+		CC70D54623B02AD478AE2AD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E7780661E35EAA7531BC43F /* Pods_pairgame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9840F2C2B569CA563BD2014 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9681A7F00C5BA9768EE1EBD8 /* Pods-pairgame.debug.xcconfig */,
+				A6D0B0DD095AD7E8A18EB8E2 /* Pods-pairgame.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,6 +149,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D36A89A235240DE001E2F5C /* Build configuration list for PBXNativeTarget "pairgame" */;
 			buildPhases = (
+				69994D05CB63A0797873A6BA /* [CP] Check Pods Manifest.lock */,
 				1D36A87F235240DC001E2F5C /* Sources */,
 				1D36A880235240DC001E2F5C /* Frameworks */,
 				1D36A881235240DC001E2F5C /* Resources */,
@@ -183,6 +208,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69994D05CB63A0797873A6BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pairgame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D36A87F235240DC001E2F5C /* Sources */ = {
@@ -342,11 +392,13 @@
 		};
 		1D36A89B235240DE001E2F5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9681A7F00C5BA9768EE1EBD8 /* Pods-pairgame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4MG857P39S;
 				INFOPLIST_FILE = pairgame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,11 +412,13 @@
 		};
 		1D36A89C235240DE001E2F5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6D0B0DD095AD7E8A18EB8E2 /* Pods-pairgame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4MG857P39S;
 				INFOPLIST_FILE = pairgame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
