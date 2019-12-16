@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E5C-0Q-ATp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E5C-0Q-ATp">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -20,7 +20,8 @@
                         <viewLayoutGuide key="safeArea" id="miu-Cr-30e"/>
                     </view>
                     <connections>
-                        <segue destination="0fp-V3-z5F" kind="show" identifier="splashSegue" id="HaU-ri-EjU"/>
+                        <segue destination="0fp-V3-z5F" kind="show" identifier="gameSegue" id="HaU-ri-EjU"/>
+                        <segue destination="Jz6-kb-04O" kind="show" identifier="splashSegue" id="CiC-zg-Bm6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7JG-Js-231" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -185,7 +186,7 @@
         <!--LoginVC-->
         <scene sceneID="WyD-ZT-fIR">
             <objects>
-                <viewController id="Jz6-kb-04O" customClass="LoginVC" customModule="PairGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Jz6-kb-04O" customClass="LoginVC" customModule="PairGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aLg-VX-SN1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,13 +198,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zU7-fd-YXR">
                                 <rect key="frame" x="0.0" y="223.33333333333334" width="414" height="268.66666666666663"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvg-wM-lEj">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email:" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvg-wM-lEj">
                                         <rect key="frame" x="41.333333333333343" y="63.333333333333343" width="331.33333333333326" height="34.333333333333343"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="backgroundColor" name="invisible"/>
+                                        <color key="textColor" name="text_color"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jEi-AI-scp">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jEi-AI-scp">
                                         <rect key="frame" x="41.333333333333343" y="143.99999999999997" width="331.33333333333326" height="34"/>
+                                        <color key="backgroundColor" name="invisible"/>
+                                        <color key="textColor" name="text_color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -221,9 +225,27 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgf-6s-SdI">
                                 <rect key="frame" x="20" y="492" width="374" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" name="bg_btn"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0fp-V3-z5F" kind="show" identifier="playSegue" id="Vuy-gS-R5O"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="seD-FO-Tvx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don’t have a account?, REGISTER." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTr-8H-fkn">
+                                <rect key="frame" x="20" y="831" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="text_color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEy-OZ-t6O">
+                                <rect key="frame" x="257" y="566" width="137" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="text_color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="seD-FO-Tvx">
                                 <rect key="frame" x="0.0" y="44.000000000000014" width="414" height="179.33333333333337"/>
                             </imageView>
                         </subviews>
@@ -235,28 +257,47 @@
                             <constraint firstItem="seD-FO-Tvx" firstAttribute="height" secondItem="aLg-VX-SN1" secondAttribute="height" multiplier="0.2" id="BVF-WI-hx1"/>
                             <constraint firstItem="zU7-fd-YXR" firstAttribute="leading" secondItem="TUq-YE-mMQ" secondAttribute="leading" id="Bdn-6b-9ia"/>
                             <constraint firstItem="TUq-YE-mMQ" firstAttribute="trailing" secondItem="XtT-yN-Syp" secondAttribute="trailing" id="Bhb-u8-ua5"/>
+                            <constraint firstItem="LEy-OZ-t6O" firstAttribute="top" secondItem="Cgf-6s-SdI" secondAttribute="bottom" constant="44" id="Cej-EW-qHC"/>
                             <constraint firstAttribute="bottom" secondItem="XtT-yN-Syp" secondAttribute="bottom" id="Inf-gb-zWf"/>
                             <constraint firstItem="TUq-YE-mMQ" firstAttribute="trailing" secondItem="zU7-fd-YXR" secondAttribute="trailing" id="NZ3-2d-Sjc"/>
                             <constraint firstItem="seD-FO-Tvx" firstAttribute="leading" secondItem="TUq-YE-mMQ" secondAttribute="leading" id="Puf-U5-YAW"/>
                             <constraint firstItem="XtT-yN-Syp" firstAttribute="leading" secondItem="TUq-YE-mMQ" secondAttribute="leading" id="RiE-Ea-d83"/>
                             <constraint firstItem="TUq-YE-mMQ" firstAttribute="trailing" secondItem="Cgf-6s-SdI" secondAttribute="trailing" constant="20" id="ab0-yt-ZSo"/>
                             <constraint firstItem="zU7-fd-YXR" firstAttribute="height" secondItem="XtT-yN-Syp" secondAttribute="height" multiplier="0.3" id="d0i-5m-itU"/>
+                            <constraint firstItem="TUq-YE-mMQ" firstAttribute="trailing" secondItem="qTr-8H-fkn" secondAttribute="trailing" constant="20" id="fh9-Hj-iZJ"/>
                             <constraint firstItem="Cgf-6s-SdI" firstAttribute="top" secondItem="zU7-fd-YXR" secondAttribute="bottom" id="ga9-gh-q3V"/>
+                            <constraint firstItem="LEy-OZ-t6O" firstAttribute="trailing" secondItem="Cgf-6s-SdI" secondAttribute="trailing" id="hfh-oM-NM1"/>
+                            <constraint firstItem="TUq-YE-mMQ" firstAttribute="bottom" secondItem="qTr-8H-fkn" secondAttribute="bottom" constant="10" id="i2T-N1-ne8"/>
+                            <constraint firstItem="qTr-8H-fkn" firstAttribute="leading" secondItem="TUq-YE-mMQ" secondAttribute="leading" constant="20" id="mhd-5b-HOe"/>
                             <constraint firstItem="TUq-YE-mMQ" firstAttribute="trailing" secondItem="seD-FO-Tvx" secondAttribute="trailing" id="rzq-Fi-Eln"/>
                             <constraint firstItem="seD-FO-Tvx" firstAttribute="top" secondItem="TUq-YE-mMQ" secondAttribute="top" id="svh-ul-ayB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TUq-YE-mMQ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kAT-u2-dpA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBZ-Vr-qv3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-175.36231884057972" y="656.25"/>
+            <point key="canvasLocation" x="-100" y="513"/>
         </scene>
     </scenes>
     <resources>
         <image name="cover_image" width="280" height="259"/>
+        <image name="logo" width="126" height="80"/>
         <namedColor name="background">
             <color red="0.019607843137254902" green="0.066666666666666666" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="bg_btn">
+            <color red="0.17254901960784313" green="0.27058823529411763" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="invisible">
+            <color red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="text_color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Vuy-gS-R5O"/>
+    </inferredMetricsTieBreakers>
 </document>
