@@ -110,7 +110,7 @@ final class FloatingTextField: UITextField {
     private func configure() {
         borderStyle = .none
 
-        border.backgroundColor = .gray
+        border.backgroundColor = .white
         border.isUserInteractionEnabled = false
         addSubview(border)
 
@@ -130,7 +130,7 @@ final class FloatingTextField: UITextField {
     }
 
     private func updateBorder() {
-        let borderColor = isFirstResponder ? tintColor : .gray
+        let borderColor = isFirstResponder ? tintColor : .white
         UIView.animate(withDuration: Constants.duration) {
             self.border.backgroundColor = borderColor
         }

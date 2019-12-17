@@ -13,8 +13,14 @@ class LoginVC: UIViewController {
     @IBOutlet weak var registerTxt: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let registerClickTAP = UITapGestureRecognizer(target: self, action: #selector(registerClick))
+        registerTxt.addGestureRecognizer(registerClickTAP)
 
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func registerClick(){
+        performSegue(withIdentifier: "loginToRegister", sender: self)
     }
     
 
