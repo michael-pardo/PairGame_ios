@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol SelectLevelPRO {
+    func levelSelected(levelNumber: Int)
+}
+
 class LevelCell: UITableViewCell {
+    
+    var selectLevelProtocol : SelectLevelPRO?
 
     @IBOutlet weak var btnLevel: UIButton!
     
@@ -28,6 +34,6 @@ class LevelCell: UITableViewCell {
     }
 
     @IBAction func selectLevel(_ sender: UIButton) {
-        
+        self.selectLevelProtocol?.levelSelected(levelNumber: 0)
     }
 }

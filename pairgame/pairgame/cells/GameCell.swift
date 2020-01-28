@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class GameCell: UICollectionViewCell {
     
     @IBOutlet weak var card: UIImageView!

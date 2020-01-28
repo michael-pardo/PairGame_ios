@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource  {
+    
+    
    
     
+    var disposeBag = DisposeBag()
 
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -27,20 +33,35 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "levelCell", for: indexPath) as! LevelCell
-        
+        cell.selectLevelProtocol = self
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "levelSegue", sender: self)
+        goToGame()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
     
+    func goToGame() {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "levelSegue", sender: self)
+        }
+        
+    }
+    
+    
+    
     
 
 
+}
+
+extension ViewController: SelectLevelPRO{
+    func levelSelected(levelNumber: Int) {
+        goToGame()
+    }
 }
 
