@@ -6,5 +6,7 @@ target 'pairgame' do
   use_frameworks!
 
   # Pods for pairgame
+	pod 'RxSwift', '~> 5'
+	pod 'RxCocoa', '~> 5'
 
 end
